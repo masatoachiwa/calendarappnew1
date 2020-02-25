@@ -33,7 +33,7 @@ class TopViewController: UIViewController {
         let date = Date() //本日の日付取得
         let dateFormatter = DateFormatter() //文字列からDate型の日付を生成できる（インスタンスの作成）
       
-        
+        var n = 0
 
         
 
@@ -79,10 +79,10 @@ class TopViewController: UIViewController {
           talkManager.date(abcd:dateFormatter.string(from: date) )
         print(talkManager.dayArray)
 
-                //                let modifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: date)!
-//
-//                print(date)
-//                print(modifiedDate)
+                               let modifiedDate = Calendar.current.date(byAdding: .day, value: n, to: date)!
+  n = n + 1
+              print(date)
+               print(modifiedDate)
         }
         
         
